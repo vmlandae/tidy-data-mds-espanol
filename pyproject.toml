@@ -18,20 +18,31 @@ keywords = [
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.9"
 
 # Data Science Tools
-jupyterlab = "^2.2.6"
-matplotlib = "^3.3.1"
-numpy = "^1.19.1"
-pandas = "^1.1.1"
-seaborn = "^0.10.1"
-sklearn = "^0.0"
+jupyterlab = "3.3.2"
+jupyter = "1.0.0"
+notebook = "6.4.8"
+matplotlib = "3.5.1"
+numpy = "1.21.5"
+pandas = "1.4.2"
+seaborn = "0.11.2"
+scikit-learn = "1.0.2"
 
 # Interfaces to other tools
-rpy2 = "==2.8.*"  # R support
-savreaderwriter = "^3.4.2"  # IBM SPSS support
+rpy2 = "==3.5.1"  # R support
+#savreaderwriter = "^3.4.2"  # IBM SPSS support
 
-# Code Formatters
-black = "^19.10b0"
-nb_black = "^1.0.7"
+[tool.poetry2conda]
+name = "tidy-data-env-conda"
+
+[tool.poetry2conda.dependencies]
+jupyterlab = { channel = "conda-forge" }
+matplotlib = { channel = "conda-forge" }
+numpy= { channel = "conda-forge" }
+seaborn= { channel = "conda-forge" }
+pandas= { channel = "conda-forge" }
+rpy2= { channel = "conda-forge" }
+#savreaderwriter= { channel = "gusdunn" }
+scikit-learn= { channel = "conda-forge" }
