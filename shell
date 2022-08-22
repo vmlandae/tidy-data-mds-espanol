@@ -1,0 +1,7 @@
+
+conda create -n tidy_data_conda
+
+conda activate tidy_data
+
+
+
